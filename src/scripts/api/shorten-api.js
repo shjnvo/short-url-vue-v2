@@ -1,4 +1,4 @@
-const baseUrl = 'http://localhost:3031/v1/encode';
+const baseUrl = 'https://short-url-api.herokuapp.com/v1/encode';
 
 const shortenLink = async (link) => {
   try {

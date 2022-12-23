@@ -7,5 +7,5 @@ export default defineConfig({
     port: 3080
   },
   plugins: [vue()],
-  base: './',
+  base: '/',
 })
