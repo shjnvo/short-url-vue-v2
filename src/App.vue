@@ -2,7 +2,7 @@
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
 import { ref } from 'vue';
-import shortenLink from './scripts/api/shorten-api';
+import { shortenLink } from './scripts/api/shorten-api';
 import { saveLink, getLinks, removeLink } from './scripts/data/links-data';
 
 import NavBar from './components/NavBar.vue';
@@ -83,8 +83,8 @@ window.onscroll = () => {
     <header class="sticky top-0 z-10 bg-white" :class="headerClassOnScroll">
       <NavBar />
     </header>
-
     <main class="bg-neutral-gray bg-opacity-20 flex flex-col h-screen">
+      <h1 class="text-center text-3xl text-red-600 pt-0.5">{{ $route.hash.message }}</h1>
       <div
         class="shorten-link-container px-8 text-neutral-very-dark-violet lg:px-0 my-auto"
       >
