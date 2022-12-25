@@ -9,12 +9,10 @@ export default createRouter({
     {
       path: '/:code',
       component: App,
-      name: 'redirect',
       beforeEnter: async (to, from, next) => {
         if (to.params.code) {
           const res = await redirectLink(to.params.code)
           if (res.message){
-
             to.hash = res
           }else{
             window.location.href = res.original_url;
